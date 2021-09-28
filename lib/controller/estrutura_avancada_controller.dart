@@ -46,7 +46,7 @@ class ArvoreBinariaController {
       print('::     1  - Gerar Árvore Manual               ::');
       print('::     2  - Gerar Árvore Automatica           ::');
       print('::     3  - Adicionar elemento na Árvore      ::');
-      print('::     0  - Sair sem gerar Árvore             ::\n');
+      print('::     0  - Sair                              ::\n');
 
       try {
         op = int.parse(stdin.readLineSync()!);
@@ -103,7 +103,7 @@ class ArvoreBinariaController {
     } catch (e) {
       print('Valor informado é inválido');
     }
-    print('A altura do elemento $num é: ${tree.altura(num)}');
+    print('A altura do elemento $num é: ');
   }
 
   void getProfundidade() {
@@ -154,5 +154,8 @@ class ArvoreBinariaController {
     }
   }
 
-  void getCount() {}
+  void getCount() {
+    print('A quantidade de elementos na árvore é: ');
+    tree.count();
+  }
 }

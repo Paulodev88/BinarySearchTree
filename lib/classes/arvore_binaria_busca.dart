@@ -7,6 +7,8 @@ class ArvoreBinariaBusca {
     this.raiz,
   });
 
+  set end(int end) {}
+
   void deleteElemento(int elemento) {
     raiz = deleteRecursivo(raiz!, elemento);
   }
@@ -186,46 +188,16 @@ class ArvoreBinariaBusca {
   }
 
   //Falta implementar
-  int altura(int elemento) {
-    return getAltura(searchRecursive(raiz, elemento));
-  }
+  void altura(int elemento) {}
 
   //Falta implementar
-  int getAltura(dynamic no) {
-    if (hasChildren(no)) {
-      if (no.right != null) {
-        return (1 + getAltura(no.right));
-      }
-      if (no.left != null) {
-        return (1 + getAltura(no.left));
-      }
-    }
-
-    return 0;
-  }
-
-  //Falta implementar
-  bool hasChildren(dynamic no) {
-    if (no!.right == null || no!.left == null) {
-      return false;
-    }
-    return true;
-  }
+  void getAltura(dynamic no) {}
 
   //Falta implementar
   void count() {
-    posOrderRecursive(raiz);
+    countRecursive(raiz!);
   }
 
-  //Ordenação LRN
-  void countRecursive(No? no) {
-    var tamanho = 0;
-    if (no != null) {
-      countRecursive(no.left);
-      countRecursive(no.right);
-      tamanho++;
-    } else {
-      print(tamanho);
-    }
-  }
+  //Falta implementar
+  void countRecursive(No? no) {}
 }

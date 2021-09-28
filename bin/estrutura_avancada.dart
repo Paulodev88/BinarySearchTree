@@ -14,12 +14,10 @@ void main(List<String> arguments) {
     print('::     3  - Imprimir Árvore Pré-Ordem NLR     ::');
     print('::     4  - Imprimir Árvore In-Ordem  LNR     ::');
     print('::     5  - Imprimir o Grau                   ::');
-    print('::     6  - Imprimir a Altura                 ::');
+    print('::     6  - Verificar Elemento                ::');
     print('::     7  - Imprimir a Profundidade           ::');
     print('::     8  - Imprimir os Níveis                ::');
     print('::     9  - Remover um Elemento               ::');
-    print('::     10 - Verificar Elemento                ::');
-    print('::     11 - Verificar a quantidade Elemento   ::');
     print('::     0  - Finalizar Programa                ::\n');
 
     try {
@@ -45,7 +43,7 @@ void main(List<String> arguments) {
         controller.getGrau();
         break;
       case 6:
-        controller.getAltura();
+        controller.getVerificar();
         break;
       case 7:
         controller.getProfundidade();
@@ -57,10 +55,8 @@ void main(List<String> arguments) {
         controller.getRemover();
         break;
       case 10:
-        controller.getVerificar();
         break;
       case 11:
-        controller.getCount();
         break;
     }
   } while (choice != 0);
